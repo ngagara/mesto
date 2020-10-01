@@ -4,6 +4,7 @@ import CardList from "./CardList.js";
 import FormValidator from "./FormValidator.js";
 import Popup from "./Popup.js";
 import UserInfo from "./UserInfo.js";
+import "../pages/index.css"
 
 (function () {
   'use strict';
@@ -20,8 +21,11 @@ import UserInfo from "./UserInfo.js";
   const addPopupForm = document.forms.newCard;
   const editPopupFrorm = document.forms.editPopupForm;
 
+  const isDev = process.env.NODE_ENV === 'development';
+  const server = isDev ? 'https://nomoreparties.co/cohort11' : 'http://nomoreparties.co/cohort11';
+
   const api = new Api({
-    baseUrl: 'https://nomoreparties.co/cohort11',
+    baseUrl: server,
     headers: {
       authorization: 'a0621f41-ad7c-4fb1-8764-077b435bf777',
       'Content-Type': 'application/json'
