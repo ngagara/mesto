@@ -22,7 +22,7 @@ import "../pages/index.css"
   const editPopupFrorm = document.forms.editPopupForm;
 
   const isDev = process.env.NODE_ENV === 'development';
-  const server = isDev ? 'https://nomoreparties.co/cohort11' : 'http://nomoreparties.co/cohort11';
+  const server = isDev ? 'http://nomoreparties.co/cohort11' : 'https://nomoreparties.co/cohort11';
 
   const api = new Api({
     baseUrl: server,
