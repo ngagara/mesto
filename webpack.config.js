@@ -11,7 +11,7 @@ const isDev = process.env.NODE_ENV === "development";
 module.exports = {
   mode: "development",
   entry: {
-    index: "./src/scripts/index.js"
+    index: "./src/scripts/index.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -48,10 +48,15 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-        (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-        'css-loader', 
-        'postcss-loader'
-        ]
+          isDev ? "style-loader" : MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 2,
+            },
+          },
+          "postcss-loader",
+        ],
       },
       {
         test: /\.(png|jpg|gif|ico|svg)$/,
