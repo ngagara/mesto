@@ -11,7 +11,7 @@ const isDev = process.env.NODE_ENV === "development";
 module.exports = {
   mode: "development",
   entry: {
-    index: "./src/scripts/index.js",
+    index: "./src/scripts/index.js"
   },
   output: {
     path: path.resolve(__dirname, "dist"),
