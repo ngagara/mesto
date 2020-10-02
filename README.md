@@ -2,6 +2,13 @@
 
 Работа с Webpack. version 0.0.1
 
+Инструкция:
+- Скачать архив;
+- Ввести команду "npm install webpack";
+- Запустить в режиме разработки командой "npm run dev";
+- Запустить в режиме окончательной сборки "npm run build";
+- Запустить рабочую версию проекта на сервере "npm run deploy";
+
 Технологии использованные в проекте: Java Script, CSS, HTML, Webpack.
 
 Ссылка на рабочую версию: https://ngagara.github.io/mesto
